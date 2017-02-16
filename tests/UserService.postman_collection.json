@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "UserService",
+		"_postman_id": "4707b1be-92e3-d776-c91a-5ddcc6bfc14e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add User 1 Test",
+			"request": {
+				"url": "localhost:8080/userservice/iuserservice/adduser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"User\",\n\t\"login\" : \"User1\",\n\t\"email\" : \"user1@exmpl.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add User 2 Test",
+			"request": {
+				"url": "localhost:8080/userservice/iuserservice/adduser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"User\",\n\t\"login\" : \"User2\",\n\t\"email\" : \"user2@exmpl.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User 1 Test",
+			"request": {
+				"url": "localhost:8080/userservice/iuserservice/getuser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\" : \"User1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User 2 Test",
+			"request": {
+				"url": "localhost:8080/userservice/iuserservice/removeuser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\" : \"User2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add User Group Test",
+			"request": {
+				"url": "localhost:8080/userservice/iuserservice/addusergroup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\" : \"User1\",\n\t\"group\" : {\n\t\t\"name\" : \"groupName\",\n\t\t\"users\" : []\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User Group Test",
+			"request": {
+				"url": "localhost:8080/userservice/iuserservice/removeusergroup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\" : \"User1\",\n\t\"group\" : {\n\t\t\"name\" : \"groupName\",\n\t\t\"users\" : []\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
